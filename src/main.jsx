@@ -7,6 +7,6 @@ import Apicall from './utils/API.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Apicall />
+    <App />
   </React.StrictMode>,
 )
