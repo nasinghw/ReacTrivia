@@ -1,5 +1,6 @@
 import React from 'react'; 
 import Description from '../components/landingPage/Description';
+import FloatingIcons from '../components/landingPage/FloatingIcons';
 // import Button from '../template/Button';
 // import Header from '../template/Header';
 // import Footer from '../template/Footer';
@@ -8,7 +9,7 @@ import Description from '../components/landingPage/Description';
 const LandingPage = () => {
     return(
  <>
-
+<FloatingIcons />
  <Description />
  {/* Temporary Placeholder Buttons */}
  {/* TODO: Link Template Buttons once ready */}
