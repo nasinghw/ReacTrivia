@@ -5,20 +5,20 @@ import { useEffect, useState } from 'react';
 function App() {
 
   const [triviaQuestion, setTriviaQuestion] = useState([]);
-  const [correctAnswer, setCorrectAnswer] = useState("");
+  const [rightAnswer, setrightAnswer] = useState("");
   const [currentPoints, setCurrentPoints] = useState(0);
   const [allPossibleAnswers, setAllPossibleAnswers] = useState([]);
   const [loading, setLoading] = useState(false);
 
   //combines correct and incorrect answer into single array
-  async function combineAllAnswers(incorrectAnswers, correctAnswer) {
+  async function combineAllAnswers(inrightAnswers, rightAnswer) {
     let allAnswers = [];
-    incorrectAnswers.map((item) => {
-      item.incorrect_answers.map((incorrectAnswer) => {
-        allAnswers.push(incorrectAnswer)
+    inrightAnswers.map((item) => {
+      item.incorrect_answers.map((inrightAnswer) => {
+        allAnswers.push(inrightAnswer)
       });
     });
-    allAnswers.push(correctAnswer);
+    allAnswers.push(rightAnswer);
     //Randomize order of answers in array
     allAnswers.sort(() => Math.random() - 0.5);
     setAllPossibleAnswers(allAnswers);
@@ -33,10 +33,19 @@ function App() {
     const resp = await axios.get("https://opentdb.com/api.php?amount=1");
 
     setTriviaQuestion(resp.data.results);
-    setCorrectAnswer(resp.data.results[0].correct_answer);
+    setrightAnswer(resp.data.results[0].correct_answer);
 
     //Combines correct and incorrect answers into single array
     await combineAllAnswers(resp.data.results, resp.data.results[0].correct_answer);
+
+
+    //console logs
+    console.log("Trivia Question:", tdbQuestion);
+    console.log("Correct Answer:", rightAnswer);
+    console.log("All Possible Answers:", allPossibleAnswers);
+    console.log("correct Answer", rightAnswer);
+
+
 
     //Set loading boolean to false so that we know to show trivia question
     setLoading(false);
@@ -48,7 +57,7 @@ function App() {
 
   function verifyAnswer(selectedAnswer) {
     //If the selected answer equals the correct answer, then we get the next trivia quesiton and increase the current points by 1
-    if (selectedAnswer === correctAnswer) {
+    if (selectedAnswer === rightAnswer) {
       getTriviaData();
       setCurrentPoints(currentPoints + 1);
     } else {
