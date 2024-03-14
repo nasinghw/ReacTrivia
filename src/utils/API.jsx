@@ -4,9 +4,9 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [triviaQuestion, setTriviaQuestion] = useState([]);
+  const [tdbQuestion, settdbQuestion] = useState([]);
   const [rightAnswer, setrightAnswer] = useState("");
-  const [currentPoints, setCurrentPoints] = useState(0);
+  const [startPoints, setstartPoints] = useState(0);
   const [allPossibleAnswers, setAllPossibleAnswers] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -32,7 +32,7 @@ function App() {
     //Make trivia api call using axios
     const resp = await axios.get("https://opentdb.com/api.php?amount=1");
 
-    setTriviaQuestion(resp.data.results);
+    settdbQuestion(resp.data.results);
     setrightAnswer(resp.data.results[0].correct_answer);
 
     //Combines correct and incorrect answers into single array
@@ -44,6 +44,7 @@ function App() {
     console.log("Correct Answer:", rightAnswer);
     console.log("All Possible Answers:", allPossibleAnswers);
     console.log("correct Answer", rightAnswer);
+    console.log("All Answers", allPossibleAnswers);
 
 
 
@@ -59,10 +60,10 @@ function App() {
     //If the selected answer equals the correct answer, then we get the next trivia quesiton and increase the current points by 1
     if (selectedAnswer === rightAnswer) {
       getTriviaData();
-      setCurrentPoints(currentPoints + 1);
+      setstartPoints(startPoints + 1);
     } else {
       //If the selected answer does not equal the correct answer, decreaes the current points by 1
-      setCurrentPoints(currentPoints - 1);
+      setstartPoints(startPoints - 1);
     }
   }
 
@@ -76,11 +77,11 @@ function App() {
       <header className="App-header">
         {loading ? "Trivia Question Loading..." : <div>
           <div>
-            Current Points: {currentPoints}
+            Current Points: {startPoints}
           </div>
           <br />
 
-          {triviaQuestion.map((triviaData, index) =>
+          {tdbQuestion.map((triviaData, index) =>
             <div key={index}>
               <div>
                 {removeCharacters(triviaData.question)}
