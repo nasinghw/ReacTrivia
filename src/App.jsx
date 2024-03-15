@@ -1,13 +1,26 @@
 import React from 'react'
 import './App.css'
-import QuestionContent from './components/questionsPage/QuestionContent'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+
+import Layout from './pages/tempNavBar.jsx'
+import LandingPage from './pages/LandingPage.jsx'
+import QuestionsPage from './pages/QuestionsPage.jsx'
+
+
 
 
 function App() {
 
   return (
-   <QuestionContent />
+ <Router>
+
+  <Layout/>
+    <Routes>
+      <Route index element={<LandingPage  />} />
+      <Route  path='questions-page' element={<QuestionsPage />} />
+    </Routes>
+ </Router>
   )
 }
 
-export default App
+export default App;
