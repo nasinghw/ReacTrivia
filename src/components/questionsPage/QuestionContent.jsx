@@ -50,30 +50,30 @@ const questionArray = [];
 
     }
 
-const questionArray = [];
+// const questionArray = [];
 
 
-const apiUrl = 'https://the-trivia-api.com/v2/questions?limit=10&categories=science,film_and_tv';
+// const apiUrl = 'https://the-trivia-api.com/v2/questions?limit=10&categories=science,film_and_tv';
 
-// Make a GET request using the Fetch API
-fetch(apiUrl)
-  .then(response => {
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    return response.json();
-  })
-  .then(userData => {
+// // Make a GET request using the Fetch API
+// fetch(apiUrl)
+//   .then(response => {
+//     if (!response.ok) {
+//       throw new Error('Network response was not ok');
+//     }
+//     return response.json();
+//   })
+//   .then(userData => {
 
-    userData.forEach((index) => {
-        questionArray.push(index.category)
-    })
+//     userData.forEach((index) => {
+//         questionArray.push(index.category)
+//     })
 
-    console.log(userData)
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+//     console.log(userData)
+//   })
+//   .catch(error => {
+//     console.error('Error:', error);
+//   });
 
 
 const QuestionContent = ()=>{
