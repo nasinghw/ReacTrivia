@@ -7,6 +7,7 @@ import LandingPage from './pages/LandingPage.jsx'
 import QuestionsPage from './pages/QuestionsPage.jsx'
 import AdvancedForm from './components/userFormPage/AdvancedForm.jsx';
 import UserFormPage from './pages/UserFormPage.jsx';
+import ResultsPage from './pages/ResultsPage.jsx';
 
 
 
@@ -27,6 +28,7 @@ function App() {
       <Route index element={<LandingPage  />} />
       <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>} />
       <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
+      <Route  path='results-page' element={<ResultsPage questionArray={questionArray} result={result}/>} />
     </Routes>
  </Router>
   )
