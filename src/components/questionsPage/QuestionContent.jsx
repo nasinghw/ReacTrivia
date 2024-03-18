@@ -7,6 +7,7 @@ const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=
   const [questionCount, setQuestionCount] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('')
   const { question, choices, correctAnswer } = questionArray[questionCount]
+  const { score, correct, incorrect } = result
 
   const nextQuestion = () => {
     setQuestionCount((current) => current + 1)
@@ -36,6 +37,7 @@ const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=
         ))}
       </ul>
       <button onClick={nextQuestion}>Next</button>
+      <h3>Score:{score} Correct:{correct} Incorrect: {incorrect}</h3>
       </>
   )
 }
