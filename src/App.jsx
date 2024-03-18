@@ -1,23 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
+import QuestionContent from './components/questionsPage/QuestionContent.jsx';
 import Layout from './pages/tempNavBar.jsx'
 import LandingPage from './pages/LandingPage.jsx'
 import QuestionsPage from './pages/QuestionsPage.jsx'
+import AdvancedForm from './components/userFormPage/AdvancedForm.jsx';
+import UserFormPage from './pages/UserFormPage.jsx';
 
 
 
 
 function App() {
-
+  const [questionArray, setQuestionArray] = useState([]);
+  console.log(questionArray)
   return (
  <Router>
 
   <Layout/>
     <Routes>
       <Route index element={<LandingPage  />} />
-      <Route  path='questions-page' element={<QuestionsPage />} />
+      <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
+      <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
     </Routes>
  </Router>
   )

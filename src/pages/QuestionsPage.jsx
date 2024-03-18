@@ -1,10 +1,10 @@
 import QuestionContent from '../components/questionsPage/QuestionContent';
 
-const QuestionsPage = () =>{
+const QuestionsPage = ({ questionArray, setQuestionArray }) =>{
 
     return(
         <>
-            <QuestionContent />
+            <QuestionContent questionArray={questionArray} setQuestionArray={setQuestionArray}/>
         </>
     );
 
