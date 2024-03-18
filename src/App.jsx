@@ -13,6 +13,11 @@ import UserFormPage from './pages/UserFormPage.jsx';
 
 function App() {
   const [questionArray, setQuestionArray] = useState([]);
+  const [result, setResult] = useState({
+    score: 0,
+    correct: 0,
+    incorrect: 0,
+  })
   console.log(questionArray)
   return (
  <Router>
@@ -20,7 +25,7 @@ function App() {
   <Layout/>
     <Routes>
       <Route index element={<LandingPage  />} />
-      <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
+      <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>} />
       <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
     </Routes>
  </Router>
