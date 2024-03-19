@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-
-
-
+import { useNavigate } from 'react-router-dom';
 
   const AdvancedForm = ({ questionArray, setQuestionArray }) =>{
+    const navigate = useNavigate();
+    
     function shuffleArray(array) {
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
@@ -16,7 +16,7 @@ import React, { useEffect, useState } from "react";
         const difficulty = event.target.difficulty.value;
         const category = event.target.category.value
         const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${questionLimit}&difficulties=${difficulty}&categories=${category}`;
-    
+
         fetch(apiUrl)
             .then(response => {
                 if (!response.ok) {
@@ -40,6 +40,7 @@ import React, { useEffect, useState } from "react";
                 }
                 setQuestionArray(newQuestionArray)
                 console.log(questionArray)
+                navigate('/questions-page')
             })
             .catch(error => {
                 console.error('Error:', error);
