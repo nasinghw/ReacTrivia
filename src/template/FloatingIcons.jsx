@@ -64,7 +64,7 @@ const FloatingIcons = () => {
             },
             particles: {
                 color: {
-                    value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363", "#350f4a", "#8e1255", "#e2ea7f", "#c99073"]
+                    value: "#ffffff"
                 },
                 links: {
                     color: "random",
