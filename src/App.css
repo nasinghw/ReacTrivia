@@ -1,3 +1,7 @@
+:root {
+  --primary-color: #e2ea7f;
+}
+
 body {
   position: relative;
   padding: 0;
@@ -13,6 +17,12 @@ body {
   text-align: center;
   background-color: #8e1255;
   border-radius: 10px;
+}
+
+/* btn */
+
+.btn-primary {
+  background-color: var(--primary-color);
 }
 
 /* Small devices (landscape phones, 576px and up) */

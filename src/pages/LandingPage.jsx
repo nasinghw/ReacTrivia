@@ -28,7 +28,7 @@ const LandingPage = ({ setResult }) => {
                     <button className="btn-primary" onClick={resetResults}>Start a Quiz</button>
                 </Link>
                 <Link to="/highscores">
-                    <button>Highscores</button>
+                    <button className="btn-primary">Highscores</button>
                 </Link>
             </div>
         </>
