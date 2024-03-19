@@ -1,5 +1,6 @@
 :root {
   --primary-color: #e2ea7f;
+  --btn-color: black;
 }
 
 body {
@@ -23,6 +24,7 @@ body {
 
 .btn-primary {
   background-color: var(--primary-color);
+  color:var(--btn-color);
 }
 
 /* Small devices (landscape phones, 576px and up) */
