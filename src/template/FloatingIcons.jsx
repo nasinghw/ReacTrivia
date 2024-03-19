@@ -64,10 +64,10 @@ const FloatingIcons = () => {
             },
             particles: {
                 color: {
-                    value: "#ffffff",
+                    value: ["#BD10E0", "#B8E986", "#50E3C2", "#FFD300", "#E86363", "#350f4a", "#8e1255", "#e2ea7f", "#c99073"]
                 },
                 links: {
-                    color: "#ffffff",
+                    color: "random",
                     distance: 150,
                     enable: true,
                     opacity: 0.5,
@@ -94,13 +94,13 @@ const FloatingIcons = () => {
                     value: 0.5,
                 },
                 shape: {
-                    type: "circle",
-                    close: false,
-                    fill: false,
+                    type: ["star", "circle", "triangle"],
+                    close: true,
+                    fill: true,
                     
                 },
                 size: {
-                    value: { min: 1, max: 5 },
+                    value: { min: 0.1, max: 5 },
                 },
             },
             detectRetina: true,
