@@ -1,7 +1,7 @@
 # < ReactTrivia /> Quiz Generator
 
 ## Overview
-This group project serves to showcase our work in creating an applicationfor users to play trivia games, covering different categories, and track their highscores. 
+This group project serves to showcase our work in creating an application for users to play trivia games, covering different categories, and track their highscores. 
 
 Our motivation for development was to provide a site offering dynamically generated and engaging quizzes for users to test their trivia knowledge. 
 
