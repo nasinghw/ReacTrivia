@@ -1,5 +1,6 @@
 body {
   background-color: #350f4a;
+  color: lightgray;
 }
 #root {
   max-width: 1280px;
