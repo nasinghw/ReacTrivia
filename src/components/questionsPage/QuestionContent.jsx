@@ -5,11 +5,24 @@ import questions from '../../data/questions.json'
 
 
 const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=>{
+  const navigate = useNavigate();
+  
+  useEffect(() => {
+    if (questionArray.length === 0) {
+      setTimeout(() => {
+        navigate('/');
+      }, 0);
+    }
+  }, [questionArray, navigate]);
+
+  if (questionArray.length === 0) {
+    return null;
+  }
+
   const [questionCount, setQuestionCount] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState('');
   const { question, choices, correctAnswer } = questionArray[questionCount];
   const { score, correct, incorrect } = result;
-  const navigate = useNavigate();
 
   const nextQuestion = () => {
     if (questionCount !== questionArray.length - 1){
@@ -32,6 +45,7 @@ const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=
   const answerSelect = (answer) => {
     answer === correctAnswer ? setSelectedAnswer(true) : setSelectedAnswer(false)
   }
+
 
   return(
       <>

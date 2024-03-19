@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const GameSummary = ({ questionArray, result }) => {
   const { score, correct, incorrect } = result
@@ -10,7 +11,11 @@ const GameSummary = ({ questionArray, result }) => {
         <li>Correct Answers: {correct} out of {questionArray.length}</li>
         <li>Incorrect Answers: {incorrect} out of {questionArray.length}</li>
       </ul>
+      <Link to="/">
+        <button className="btn-primary" >Go home</button>
+      </Link>
     </div>
+    
   );
 };
 
