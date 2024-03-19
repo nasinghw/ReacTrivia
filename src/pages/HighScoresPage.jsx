@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 
 const HighScoresPage = () => {
@@ -10,18 +9,10 @@ const HighScoresPage = () => {
   ];
 
   // Retrieve the user's high score from local storage
-  const userHighScore = parseInt(localStorage.getItem("userScore")) || 0;
+  const userHighScore = parseInt(localStorage.getItem('userScore')) || 0;
 
-  // Retrieve data from local storage and create an array of high scores
-  const highScoresFromLocalStorage = [];
-  for (let i = 0; i < localStorage.length; i++) {
-    const key = localStorage.key(i);
-    if (key.startsWith("userScore")) {
-      const userScore = parseInt(localStorage.getItem(key));
-      const userName = localStorage.getItem("userName");
-      highScoresFromLocalStorage.push({ username: userName, score: userScore });
-    }
-  }
+  // Retrieve high scores from local storage
+  const highScoresFromLocalStorage = JSON.parse(localStorage.getItem('highScores')) || [];
 
   return (
     <div>
@@ -40,7 +31,7 @@ const HighScoresPage = () => {
       <ul>
         {highScoresFromLocalStorage.map((score, index) => (
           <li key={index}>
-            {score.username}: {score.score}
+            {score.userName}: {score.userScore}
           </li>
         ))}
       </ul>
