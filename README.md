@@ -7,8 +7,8 @@ Our motivation for development was to provide a site offering dynamically genera
 
 **User Story:**
 
-AS A trivia enthusiast
-I WANT to play quiz games 
+AS A trivia enthusiast\
+I WANT to play quiz games\
 SO THAT I can have fun & test my general knowledge
 
 ## Features
@@ -18,7 +18,7 @@ SO THAT I can have fun & test my general knowledge
      
 ## Usage & Installation
 
-1. **Fork & clone this repository:**
+1. **Fork & clone this repository:**\
    $ git clone https://github.com/nasinghw/group1p2.git
 
 2. 
