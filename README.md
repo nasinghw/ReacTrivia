@@ -23,7 +23,7 @@ SO THAT I can have fun & test my general knowledge
 
 2. 
 
-## Initital Wireframe design
+## Initial Wireframe design
 ![Wireframe](...)
 
 ## Collaborators
