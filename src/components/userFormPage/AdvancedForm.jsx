@@ -10,8 +10,12 @@ import React, { useEffect, useState } from "react";
             [array[i], array[j]] = [array[j], array[i]];
         }
     }
-    useEffect(() => {
-        const apiUrl = 'https://the-trivia-api.com/v2/questions?limit=10&categories=science,film_and_tv';
+    const handleFormSubmit = (event) => {
+        event.preventDefault();
+        const questionLimit = event.target.questionLimit.value;
+        const difficulty = event.target.difficulty.value;
+        const category = event.target.category.value
+        const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${questionLimit}&difficulties=${difficulty}&categories=${category}`;
     
         fetch(apiUrl)
             .then(response => {
@@ -35,39 +39,41 @@ import React, { useEffect, useState } from "react";
                     newQuestionArray.push(questionInfo);
                 }
                 setQuestionArray(newQuestionArray)
+                console.log(questionArray)
             })
             .catch(error => {
                 console.error('Error:', error);
             });
-      }, []);
+        }
+
 
     return(
         <>
-        <form class="w-full max-w-lg">
-            <div class="flex flex-wrap -mx-3 mb-6">
-                <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
-                    <div class="relative">
+        <form className="w-full max-w-lg" onSubmit={handleFormSubmit}>
+            <div className="flex flex-wrap -mx-3 mb-6">
+                <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
+                    <div className="relative">
                         <div>
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                            Amount of questions
-                        </label>
-                            <input class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" type="text" placeholder="# of questions (max 50)"/>
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                                Amount of questions
+                            </label>
+                            <input className="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white" id="grid-first-name" name="questionLimit" type="text" placeholder="# of questions (max 50)"/>
                         </div>
                         <div>
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                            Difficulty
-                        </label>
-                            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
-                                <option>Easy</option>
-                                <option>Medium</option>
-                                <option>Hard</option>
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                                Difficulty
+                            </label>
+                            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="difficulty">
+                                <option>easy</option>
+                                <option>medium</option>
+                                <option>hard</option>
                             </select>
                         </div>
                         <div>
-                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
-                            Category
-                        </label>
-                            <select class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
+                            <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" >
+                                Category
+                            </label>
+                            <select className="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state" name="category">
                                 <option>music</option>
                                 <option>sport_and_leisure</option>
                                 <option>film_and_tv</option>
@@ -81,7 +87,7 @@ import React, { useEffect, useState } from "react";
                             </select>
                         </div>
                     </div>
-                    <button class="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="button">
+                    <button className="flex-shrink-0 bg-teal-500 hover:bg-teal-700 border-teal-500 hover:border-teal-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
                         Submit
                     </button>
                 </div>
@@ -93,3 +99,5 @@ import React, { useEffect, useState } from "react";
 }
 
 export default AdvancedForm;
+
+
