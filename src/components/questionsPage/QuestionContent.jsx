@@ -28,6 +28,7 @@ const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=
     if (questionCount !== questionArray.length - 1){
     setQuestionCount((current) => current + 1)
     } else {
+      setQuestionCount(0)
       navigate('/results-page')
     }
     setResult((current) => 
