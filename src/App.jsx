@@ -8,6 +8,7 @@ import QuestionsPage from './pages/QuestionsPage.jsx'
 import AdvancedForm from './components/userFormPage/AdvancedForm.jsx';
 import UserFormPage from './pages/UserFormPage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
+import FloatingIcons from './template/FloatingIcons.jsx';
 
 import HighScoresPage from './pages/HighScoresPage';
 
@@ -23,8 +24,9 @@ function App() {
   return (
  <Router>
 
+<FloatingIcons />
   <Layout/>
-    <Routes>
+      <Routes>
       <Route index element={<LandingPage  setResult ={setResult}/>} />
       <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>} />
       <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
