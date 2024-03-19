@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
 
   const AdvancedForm = ({ questionArray, setQuestionArray }) =>{
     const navigate = useNavigate();
@@ -17,35 +18,60 @@ import { useNavigate } from 'react-router-dom';
         const category = event.target.category.value
         const apiUrl = `https://the-trivia-api.com/v2/questions?limit=${questionLimit}&difficulties=${difficulty}&categories=${category}`;
 
-        fetch(apiUrl)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(userData => {
-                const newQuestionArray = [];
-                for (let index = 0; index < userData.length; index++) {
-                    const { category, correctAnswer, incorrectAnswers, question } = userData[index];
-                    const questionInfo = {
-                        category: category,
-                        correctAnswer: correctAnswer,
-                        choices: incorrectAnswers,
-                        question: question.text
-                    };
-                    questionInfo.choices.push(correctAnswer);
-                    shuffleArray(questionInfo.choices);
-                    newQuestionArray.push(questionInfo);
-                }
-                setQuestionArray(newQuestionArray)
-                console.log(questionArray)
-                navigate('/questions-page')
-            })
-            .catch(error => {
-                console.error('Error:', error);
-            });
+        
+        axios.get(apiUrl)
+        .then(response => response.data)
+        .then(userData => {
+            const newQuestionArray = [];
+
+            for (let index = 0; index < userData.length; index++) {
+                const { category, correctAnswer, incorrectAnswers, question } = userData[index];
+                const questionInfo = {
+                    category: category,
+                    correctAnswer: correctAnswer,
+                    choices: incorrectAnswers,
+                    question: question.text
+            };
+            questionInfo.choices.push(correctAnswer);
+            shuffleArray(questionInfo.choices);
+            newQuestionArray.push(questionInfo);
         }
+            setQuestionArray(newQuestionArray)
+            // console.log(questionArray)
+            navigate('/questions-page')
+        })
+    .catch(error => {
+        console.error('Error:', error);
+        });
+        
+        //     .then(response => {
+        //         if (!response.ok) {
+        //             throw new Error('Network response was not ok');
+        //         }
+        //         return response.json();
+        //     })
+        //     .then(userData => {
+        //         const newQuestionArray = [];
+        //         for (let index = 0; index < userData.length; index++) {
+        //             const { category, correctAnswer, incorrectAnswers, question } = userData[index];
+        //             const questionInfo = {
+        //                 category: category,
+        //                 correctAnswer: correctAnswer,
+        //                 choices: incorrectAnswers,
+        //                 question: question.text
+        //             };
+        //             questionInfo.choices.push(correctAnswer);
+        //             shuffleArray(questionInfo.choices);
+        //             newQuestionArray.push(questionInfo);
+        //         }
+        //         setQuestionArray(newQuestionArray)
+        //         // console.log(questionArray)
+        //         navigate('/questions-page')
+        //     })
+        //     .catch(error => {
+        //         console.error('Error:', error);
+        //     });
+}
 
 
     return(
