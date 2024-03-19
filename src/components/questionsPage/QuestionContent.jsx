@@ -7,6 +7,11 @@ const QuestionContent = () => {
   //The current item from the array will be stored in "theCurrentQuestion"
   const [theCurrentQuestion, setTheCurrentQuestion] = useState(0);
 
+  //Created new variable to render the previous button conditionally
+  //It will only appear in case the next question button was clicked
+  //indicating that now the user has the option to go back
+  const [nextQuestionLoaded, setNextQuestionLoaded] = useState(false);
+
   //The useEffect will run the fetch of the API asynchronously
   useEffect(() => {
     //Create the function to fetch the API
@@ -38,12 +43,14 @@ const QuestionContent = () => {
   //Function to advance to the next Question
   const handleNext = () => {
     setTheCurrentQuestion((prevIndex) => prevIndex + 1);
+    setNextQuestionLoaded(true); // Set nextQuestionLoaded to true when next question is accessed
   };
 
   //Function to go to the previous Question
   //There is a need to create condition to this button to appear only when the next question is triggered
   const handlePrevious = () => {
     setTheCurrentQuestion((prevIndex) => prevIndex - 1);
+    setNextQuestionLoaded(false); // Reset nextQuestionLoaded when going to previous question
   };
 
   // Render loading message if questions are not fetched yet
@@ -69,7 +76,10 @@ const QuestionContent = () => {
           {currentQuestion.correctAnswer}
         </li>
       </ul>
-      <button onClick={handlePrevious}>Previous Question</button>
+      {/* Load previous button conditionally */}
+      {nextQuestionLoaded && (
+        <button onClick={handlePrevious}>Previous Question</button>
+      )}
       <button onClick={handleNext}>Next Question</button>
     </>
   );
