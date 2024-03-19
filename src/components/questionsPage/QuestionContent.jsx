@@ -1,16 +1,22 @@
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import questions from '../../data/questions.json'
 
 
 
 const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=>{
   const [questionCount, setQuestionCount] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState('')
-  const { question, choices, correctAnswer } = questionArray[questionCount]
-  const { score, correct, incorrect } = result
+  const [selectedAnswer, setSelectedAnswer] = useState('');
+  const { question, choices, correctAnswer } = questionArray[questionCount];
+  const { score, correct, incorrect } = result;
+  const navigate = useNavigate();
 
   const nextQuestion = () => {
+    if (questionCount !== questionArray.length - 1){
     setQuestionCount((current) => current + 1)
+    } else {
+      navigate('/results-page')
+    }
     setResult((current) => 
     selectedAnswer ? {
       ...current,
@@ -36,7 +42,7 @@ const QuestionContent = ({ questionArray, setQuestionArray, result, setResult})=
           <li onClick={() => answerSelect(ele)} key={ele}>{ele}</li>
         ))}
       </ul>
-      <button onClick={nextQuestion}>Next</button>
+      <button onClick={nextQuestion}>{questionCount === questionArray.length - 1 ? 'Finish' : 'Next'}</button>
       <h3>Score:{score} Correct:{correct} Incorrect: {incorrect}</h3>
       </>
   )
