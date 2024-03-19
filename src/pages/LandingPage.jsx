@@ -7,7 +7,16 @@ import { Link } from 'react-router-dom';
 // import Footer from '../template/Footer';
 // import FloatingIcons from '../components/landingPage/FloatingIcons';
 
-const LandingPage = () => {
+const LandingPage = ({ setResult }) => {
+
+    const resetResults = () => {
+        setResult({
+            score: 0,
+            correct: 0,
+            incorrect: 0,
+        })
+    }
+
     return (
         <>
             <FloatingIcons />
@@ -16,7 +25,7 @@ const LandingPage = () => {
             {/* TODO: Link Template Buttons once ready */}
             <div className='btn-container'>
                 <Link to="/user-form">
-                    <button className="btn-primary">Start a Quiz</button>
+                    <button className="btn-primary" onClick={resetResults}>Start a Quiz</button>
                 </Link>
                 <Link to="/highscores">
                     <button>Highscores</button>
