@@ -61,7 +61,7 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
         <div className="mb-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2 text-black-800">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Nº OF QUESTIONS
               </label>
               <input
@@ -115,7 +115,7 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
             Submit
           </button>
           <button
-            className="mt-4 w-full bg-purple-900 hover:bg-purple-700 text-sm text-white py-2 px-4 rounded"
+            className="mt-4 w-full bg-amber-600 hover:bg-amber-500 text-sm text-white py-2 px-4 rounded"
             type="button"
             onClick={handleGoHome}
           >
