@@ -84,7 +84,8 @@ const QuestionContent = ({
               selectedAnswerIndex === index
                 ? "bg-yellow-300 scale-110 rotate-3"
                 : "bg-yellow-200"
-            } font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3 w-full md:w-fit`}
+            } font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3 w-full md:w-fit answer-hover-even-rotation`}
+
           >
             {ele}
           </li>
