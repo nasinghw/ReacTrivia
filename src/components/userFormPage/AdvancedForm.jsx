@@ -115,7 +115,7 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
             Submit
           </button>
           <button
-            className="mt-4 w-full bg-purple-900 hover:bg-purple-700 text-sm text-white py-2 px-4 rounded"
+            className="mt-4 w-full bg-amber-600 hover:bg-amber-500 text-sm text-white py-2 px-4 rounded"
             type="button"
             onClick={handleGoHome}
           >
