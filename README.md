@@ -1,4 +1,4 @@
-# < ReactTrivia /> Quiz Generator
+# < ReacTrivia /> Quiz Generator
 
 ## Overview
 This group project serves to showcase our work in creating an application for users to play trivia games, covering different categories, and track their highscores. 
