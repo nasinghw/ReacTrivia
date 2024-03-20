@@ -2,7 +2,7 @@ import React from "react";
 
 const Description = () => {
   return (
-    <p className="">
+    <p className="text-base md:text-md lg:text-xl xl:text-2xl">
       {" "}
       Test your knowledge and skills by playing through our quizzes, custom
       built just for you! QuizApp allows you to choose from a variety of

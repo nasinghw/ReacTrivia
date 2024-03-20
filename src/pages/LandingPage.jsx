@@ -18,9 +18,10 @@ const LandingPage = ({ setResult }) => {
   return (
     <>
       <Description />
+      
       <div className="btn-container flex justify-center mt-3">
         <Link
-          className="btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 "
+          className="btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 shadow-sm hover:shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform hover:scale-105 active:scale-95"
           to="/user-form"
         >
           <button
@@ -32,7 +33,7 @@ const LandingPage = ({ setResult }) => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 "
             >
               <path
                 fillRule="evenodd"
@@ -43,7 +44,7 @@ const LandingPage = ({ setResult }) => {
           </button>
         </Link>
         <Link
-          className="btn-primary btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40"
+          className="btn-primary btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 shadow-sm hover:shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform hover:scale-105 active:scale-95"
           to="/highscores"
         >
           <button className="flex items-center justify-center">

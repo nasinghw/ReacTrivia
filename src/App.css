@@ -4,17 +4,20 @@
 }
 
 body {
-  position: relative;
   padding: 0;
   margin: 0;
   background-color: #350f4a;
   color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100vh;
 }
 #root {
-  position: relative;
+  top: 100px;
   max-width: 50%;
   min-width: 50%;
+  min-height: 70vh;
   margin: auto;
   padding: 2rem;
   text-align: center;
