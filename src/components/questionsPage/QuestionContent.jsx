@@ -75,13 +75,30 @@ const QuestionContent = ({
       </ul>
       <button
         onClick={nextQuestion}
-        className="bg-green-500 text-white py-2 px-8 rounded mt-5"
+        className="bg-green-500 text-white py-2 px-8 rounded mt-5 mb-10"
       >
         {questionCount === questionArray.length - 1 ? "Finish" : "Next"}
       </button>
-      <h3>
-        Score:{score} Correct:{correct} Incorrect: {incorrect}
-      </h3>
+      <div className="mt-5">
+        <button className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-orange-700 rounded-lg focus:outline-none  dark:bg-orange-600 ">
+          Score:
+          <span className="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-semibold text-gray-800 bg-orange-200 rounded-full">
+            {score}
+          </span>
+        </button>{" "}
+        <button className="inline-flex items-center px-3 py-1  text-sm font-medium text-center text-white bg-green-700 rounded-lg focus:outline-none  dark:bg-green-600 ">
+          Correct:
+          <span className="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-semibold text-gray-800 bg-green-200 rounded-full">
+            {correct}
+          </span>
+        </button>{" "}
+        <button className="inline-flex items-center px-3 py-1  text-sm font-medium text-center text-white bg-red-700 rounded-lg focus:outline-none  dark:bg-red-600 ">
+          Incorrect:
+          <span className="inline-flex items-center justify-center w-4 h-4 ms-2 text-xs font-semibold text-gray-800 bg-red-200 rounded-full">
+            {incorrect}
+          </span>
+        </button>
+      </div>
     </>
   );
 };
