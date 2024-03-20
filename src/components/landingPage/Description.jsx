@@ -1,18 +1,10 @@
 import React from "react";
-import { ReactTyped } from "react-typed";
+
 
 const Description = () => {
   return (
     <div>
-      <div className="my-20 text-center text-6xl 	" >
- <ReactTyped
-   startWhenVisible
-   strings={["Welcome to <strong>&lt;ReacTrivia /&gt;"]}
-   typeSpeed={45}
-   startDelay={2000}
-   cursorChar="_"
-  />
-  </div>
+ 
 
       <p className="text-base md:text-md lg:text-lg xl:text-1xl text-center mt-20 p-3 mx-5">
         Test your knowledge and skills by playing through our quizzes, custom
