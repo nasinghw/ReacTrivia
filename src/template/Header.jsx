@@ -6,13 +6,13 @@ const Header = () => {
     return(
     <>
     <div className="" id="header"></div>
-        <div className="my-20 text-center text-7xl 	" >
+        <div className="my-20 text-center text-7xl" >
         <ReactTyped
    
-            strings={["&lt;ReacTrivia /&gt;"]}
+            strings={["<strong>&lt;ReacTrivia /&gt;"]}
             typeSpeed={45}
             backSpeed={45}
-            backDelay={2000}
+            backDelay={10000}
             cursorChar="_"
             loop
             loopCount={5}

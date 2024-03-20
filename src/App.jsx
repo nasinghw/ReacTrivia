@@ -9,6 +9,7 @@ import AdvancedForm from './components/userFormPage/AdvancedForm.jsx';
 import UserFormPage from './pages/UserFormPage.jsx';
 import ResultsPage from './pages/ResultsPage.jsx';
 import FloatingIcons from './template/FloatingIcons.jsx';
+import Header from './template/Header.jsx';
 
 import HighScoresPage from './pages/HighScoresPage';
 
