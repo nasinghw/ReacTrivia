@@ -44,13 +44,21 @@ const GameSummary = ({ questionArray, result }) => {
           </span>
         </li>
       </ul>
-      <form onSubmit={handleFormSubmit} className="border-red">
-        <input type="text" name="userName" placeholder="Your Name Here"></input>
-        <button className="btn-primary" type="submit">
+      <form onSubmit={handleFormSubmit}>
+        <input
+          type="text"
+          name="userName"
+          placeholder="Your Name Here"
+          className="py-2 px-4 border border-gray-300 rounded-l focus:outline-none focus:ring focus:border-blue-500"
+        ></input>
+        <button
+          className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-r transition duration-300 ease-in-out"
+          type="submit"
+        >
           Submit!
         </button>
       </form>
-      <Link to="/" className="border-red">
+      <Link to="/">
         <button className="btn-primary btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 shadow-sm hover:shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform hover:scale-105 active:scale-95">
           Go home
         </button>
