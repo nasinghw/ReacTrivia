@@ -21,39 +21,50 @@ const QuestionContent = ({
     return null;
   }
 
+  //Count questions
   const [questionCount, setQuestionCount] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
-  const { question, choices, correctAnswer } = questionArray[questionCount];
-  const { score, correct, incorrect } = result;
-  let btnStyle = false;
 
+  //Capture the selected answers by their index, initialize with null value
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
+
+  //Spread the questions, choices and the corrent answers into an array
+  const { question, choices, correctAnswer } = questionArray[questionCount];
+
+  // Capture the result of scores, correct and incorrect answers
+  const { score, correct, incorrect } = result;
+
+  //Button next question will be clicked once the selected question is activated
   const nextQuestion = () => {
+
+    //The choice captured will be alocated withing the variable selectedChoice
+    const selectedChoice = choices[selectedAnswerIndex];
+    
+    //Count the questions
     if (questionCount !== questionArray.length - 1) {
       setQuestionCount((current) => current + 1);
     } else {
+      //If there is no more questions reset the counter and take user to the results page
       setQuestionCount(0);
       navigate("/results-page");
     }
-    setResult((current) =>
-      selectedAnswer
-        ? {
-            ...current,
-            score: current.score + 1,
-            correct: current.correct + 1,
-          }
-        : {
-            ...current,
-            incorrect: current.incorrect + 1,
-          }
-    );
-    console.log(result);
+    
+    //Adding scores to the results
+    setResult((current) => ({
+      ...current,
+      //According to the current if correct add it as 1+ to the variable score / correct
+      score: current.score + (selectedChoice === correctAnswer ? 1 : 0),
+      correct: current.correct + (selectedChoice === correctAnswer ? 1 : 0),
+       //According to the current if it is not correct add it as 1+ to the variable incorrect
+      incorrect: current.incorrect + (selectedChoice !== correctAnswer ? 1 : 0),
+    }));
+
+    //Resets the function to null
+    setSelectedAnswerIndex(null);
   };
 
-  const answerSelect = (answer) => {
-    btnStyle = true;
-    answer === correctAnswer
-      ? setSelectedAnswer(true)
-      : setSelectedAnswer(false);
+  //Capture the selected answer by index and set it into the function
+  const answerSelect = (index) => {
+    setSelectedAnswerIndex(index);
   };
 
   return (
@@ -63,20 +74,30 @@ const QuestionContent = ({
         {question}
       </h2>
       <ul className="flex gap-4 justify-center">
-        {choices.map((ele) => (
+        {/* Iterate over the answers */}
+        {choices.map((ele, index) => (
           <li
-            onClick={() => answerSelect(ele)}
+            onClick={() => answerSelect(index)}
             key={ele}
-            className="bg-yellow-200 font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3"
+
+            // Change the style according to the option of the user 
+            // If they click on the selected button, the, before hovered style, now remains fixed
+            className={`${
+              selectedAnswerIndex === index
+                ? "bg-yellow-300 scale-110 rotate-3"
+                : "bg-yellow-200"
+            } font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3`}
           >
             {ele}
           </li>
         ))}
       </ul>
       <button
+      
         onClick={nextQuestion}
         className="bg-green-500 text-white py-2 px-8 rounded mt-5 mb-10"
       >
+        {/*Clicking button next question to change questions forward */}
         {questionCount === questionArray.length - 1 ? "Finish" : "Next"}
       </button>
       <div className="mt-5">
