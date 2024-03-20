@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 :root {
   --primary-color: #e2ea7f;
   --btn-color: black;
@@ -13,11 +9,13 @@ body {
   margin: 0;
   background-color: #350f4a;
   color: lightgray;
+  height: 100vh;
 }
 #root {
+  position: relative;
   max-width: 50%;
   min-width: 50%;
-  margin: 0 auto;
+  margin: auto;
   padding: 2rem;
   text-align: center;
   background-color: #8e1255;
@@ -28,7 +26,7 @@ body {
 
 .btn-primary {
   background-color: var(--primary-color);
-  color:var(--btn-color);
+  color: var(--btn-color);
 }
 
 /* Small devices (landscape phones, 576px and up) */
