@@ -24,7 +24,6 @@ body {
   background-color: #8e1255;
   border-radius: 10px;
   padding-top: 3em;
-
 }
 
 .btn-container {
@@ -59,6 +58,22 @@ body {
   margin: auto 0;
 }
 
-.answer-hover-even-rotation:hover:nth-child(even){
+.answer-hover-even-rotation:hover:nth-child(even) {
   transform: rotate(-3deg);
+}
+
+.welcome {
+  color: #ffffff;
+  font-size: 0.8em;
+}
+
+.reactrivia {
+  color: rgb(255, 255, 5);
+  text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+}
+
+.more-less {
+  color: rgb(19, 140, 3);
+  font-weight: bold;
+  text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
 }

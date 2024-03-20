@@ -13,18 +13,26 @@ const LandingPage = ({ setResult }) => {
   };
 
   return (
-
-     
     <div className="flex flex-col  justify-between items-center">
-    <div className="my-20 text-center text-6xl 	" >
-    <ReactTyped
-      startWhenVisible
-      strings={["Welcome to <strong>&lt;ReacTrivia /&gt;"]}
-      typeSpeed={45}
-      startDelay={1000}
-      cursorChar="_"
-     />
-     </div>
+      <div className="text-center text-6xl 	">
+        <ReactTyped
+          startWhenVisible
+          strings={["<span class='welcome'> Welcome to</span>"]}
+          typeSpeed={45}
+          startDelay={1000}
+          cursorChar=""
+        />
+        <br />
+        <ReactTyped
+          startWhenVisible
+          strings={[
+            "<strong class='reactrivia'> <span class='more-less'> < </span> Reac<span class='more-less'>T</span>rivia <span class='more-less'>/&gt;</span>",
+          ]}
+          typeSpeed={45}
+          startDelay={2000}
+          cursorChar="_"
+        />
+      </div>
       <div>
         <Description />
       </div>
