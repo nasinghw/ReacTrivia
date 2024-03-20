@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 const HighScoresPage = () => {
   const navigate = useNavigate();
   // Fetch high scores from your database or use dummy data
   const highScores = [
-    { username: 'Player1', score: 20 },
-    { username: 'Player2', score: 17 },
+    { username: "Player1", score: 20 },
+    { username: "Player2", score: 17 },
     // Add more high scores here
   ];
 
@@ -15,23 +15,22 @@ const HighScoresPage = () => {
   };
 
   const handleClearScores = () => {
-    
-    localStorage.removeItem('highScores');
+    localStorage.removeItem("highScores");
     // Reload the page or update state to reflect the change
-    navigate("/highscores")
+    navigate("/highscores");
   };
 
   // Retrieve the user's high score from local storage
-  const userHighScore = parseInt(localStorage.getItem('userScore')) || 0;
+  const userHighScore = parseInt(localStorage.getItem("userScore")) || 0;
 
   // Retrieve high scores from local storage
-  const highScoresFromLocalStorage = JSON.parse(localStorage.getItem('highScores')) || [];
+  const highScoresFromLocalStorage =
+    JSON.parse(localStorage.getItem("highScores")) || [];
 
   return (
     <>
-
       <div>
-        <h2>High Scores</h2>
+        <h2 className="mt-10 text-xl text-zync-100 mb-5">High Scores</h2>
         <ul>
           {highScores.map((score, index) => (
             <li key={index}>
