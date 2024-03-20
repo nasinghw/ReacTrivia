@@ -29,9 +29,8 @@ const HighScoresPage = () => {
 
   return (
     <>
-
-      <div>
-        <h2>High Scores</h2>
+      <div className='pb-10'>
+        <h2 className='text-lg font-bold pb-10'>High Scores</h2>
         <ul>
           {highScores.map((score, index) => (
             <li key={index}>
@@ -67,6 +66,7 @@ const HighScoresPage = () => {
           Clear Scores
         </button>
       </div>
+      
     </>
   );
 };
