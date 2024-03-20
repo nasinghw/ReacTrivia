@@ -25,7 +25,7 @@ function App() {
   console.log(questionArray)
   return (
  <Router>
-
+<Header />
 <FloatingIcons />
       <Routes >
       <Route index element={<LandingPage  setResult ={setResult}/>} />
