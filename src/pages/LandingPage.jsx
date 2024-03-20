@@ -1,10 +1,6 @@
 import React, { useEffect } from "react";
 import Description from "../components/landingPage/Description";
 import { Link } from "react-router-dom";
-// import FloatingIcons from '../template/FloatingIcons';
-// import Button from '../template/Button';
-// import Header from '../template/Header';
-// import Footer from '../template/Footer';
 
 const LandingPage = ({ setResult }) => {
   const resetResults = () => {
@@ -16,10 +12,12 @@ const LandingPage = ({ setResult }) => {
   };
 
   return (
-    <>
-      <Description />
-      
-      <div className="btn-container flex justify-center mt-3">
+    <div className="flex flex-col  justify-between items-center">
+      <div>
+        <Description />
+      </div>
+
+      <div className="btn-container flex mt-20">
         <Link
           className="btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 shadow-sm hover:shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform hover:scale-105 active:scale-95"
           to="/user-form"
@@ -28,7 +26,7 @@ const LandingPage = ({ setResult }) => {
             onClick={resetResults}
             className="flex items-center justify-center"
           >
-            <span class="mr-2">Start a Quiz</span>{" "}
+            <span className="mr-2">Start a Quiz</span>{" "}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -48,7 +46,7 @@ const LandingPage = ({ setResult }) => {
           to="/highscores"
         >
           <button className="flex items-center justify-center">
-            <span class="mr-2 flex">Highscores</span>
+            <span className="mr-2 flex">Highscores</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -64,7 +62,7 @@ const LandingPage = ({ setResult }) => {
           </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

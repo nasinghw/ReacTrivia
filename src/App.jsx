@@ -26,7 +26,7 @@ function App() {
 
 <FloatingIcons />
   <Layout/>
-      <Routes>
+      <Routes >
       <Route index element={<LandingPage  setResult ={setResult}/>} />
       <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>} />
       <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />

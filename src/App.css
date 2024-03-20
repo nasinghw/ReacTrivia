@@ -24,7 +24,9 @@ body {
   background-color: #8e1255;
   border-radius: 10px;
 }
-
+.btn-container {
+  /* border: solid 3px green; */
+}
 /* btn */
 
 .btn-primary {
