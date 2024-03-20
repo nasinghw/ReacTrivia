@@ -67,6 +67,16 @@ const QuestionContent = ({
     setSelectedAnswerIndex(index);
   };
 
+  const handleQuitQuiz = () => {
+    setResult({
+      score: 0,
+      correct: 0,
+      incorrect: 0,
+    })
+    setQuestionArray([])
+    navigate("/")
+  }
+
   return (
     <>
       <h1 className="text-3xl font-bold">Quiz</h1>
@@ -119,6 +129,11 @@ const QuestionContent = ({
             {incorrect}
           </span>
         </button>
+      </div>
+      <div className="mt-5">
+      <button className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-orange-700 rounded-lg focus:outline-none  dark:bg-orange-600 " onClick={handleQuitQuiz}>
+          Quit quiz.
+      </button>
       </div>
     </>
   );
