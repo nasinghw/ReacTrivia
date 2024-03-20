@@ -11,6 +11,11 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
+
+  const handleGoHome = () => {
+    navigate("/")
+  }
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const questionLimit = event.target.questionLimit.value;
@@ -108,6 +113,13 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
             type="submit"
           >
             Submit
+          </button>
+          <button
+            className="mt-4 w-full bg-purple-900 hover:bg-purple-700 text-sm text-white py-2 px-4 rounded"
+            type="button"
+            onClick={handleGoHome}
+          >
+            Go home.
           </button>
         </div>
       </form>
