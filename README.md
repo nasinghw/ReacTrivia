@@ -41,7 +41,7 @@ Follow these steps to install and use this application:
    Follow the link: http://localhost:3000/
 
 ## Initial Wireframe design
-![Wireframe](...)
+![Wireframe](./public/Wireframe.png)
 
 ## Collaborators
 **Narinder Singh:**
