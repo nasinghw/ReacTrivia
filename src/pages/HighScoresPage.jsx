@@ -18,7 +18,7 @@ const HighScoresPage = () => {
     
     localStorage.removeItem('highScores');
     // Reload the page or update state to reflect the change
-    window.location.reload();
+    navigate("/highscores")
   };
 
   // Retrieve the user's high score from local storage
