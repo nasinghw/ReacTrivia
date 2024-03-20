@@ -38,10 +38,10 @@ const HighScoresPage = () => {
             </li>
           ))}
         </ul>
-        <p>Your High Score: {userHighScore}</p>
+        {/* <p>Your High Score: {userHighScore}</p> */}
 
         {/* Display high scores from local storage */}
-        <h3>High Scores from Local Storage:</h3>
+        {/* <h3>High Scores from Local Storage:</h3> */}
         <ul>
           {highScoresFromLocalStorage.map((score, index) => (
             <li key={index}>
