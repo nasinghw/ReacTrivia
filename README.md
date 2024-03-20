@@ -1,4 +1,4 @@
-# < ReactTrivia /> Quiz Generator
+# < ReacTrivia /> Quiz Generator
 
 ## Overview
 This group project serves to showcase our work in creating an application for users to play trivia games, covering different categories, and track their highscores. 
@@ -15,16 +15,33 @@ SO THAT I can have fun & test my general knowledge
 
 1. **...:**
    - ...
-     
-## Usage & Installation
 
-1. **Fork & clone this repository:**\
+## Access
+
+To view this project, the deployed site can be found hosted on Netlify at: https://unrivaled-pika-65d12f.netlify.app/
+
+## Installation & Setup
+
+Follow these steps to install and use this application:
+
+1. **Prerequisites:**\
+   To use and run this application, ensure that Node.js and npm (as well as Git) are installed locally.
+   
+3. **Fork & clone this repository:**\
    $ git clone https://github.com/nasinghw/group1p2.git
+   
+4. **Navigate to the project directory in your terminal:**\
+   $ cd group1p2
 
-2. 
+5. **Install the necessary dependencies:**\
+   $ npm install
+   
+6. **Run the application in development mode in your browser:**\
+   $ npm run dev\
+   Follow the link: http://localhost:3000/
 
 ## Initial Wireframe design
-![Wireframe](...)
+![Wireframe](./public/Wireframe.png)
 
 ## Collaborators
 **Narinder Singh:**
@@ -70,6 +87,5 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# Netlify Site Link:
 
-https://unrivaled-pika-65d12f.netlify.app/
+

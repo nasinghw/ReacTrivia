@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const GameSummary = ({ questionArray, result }) => {
+  const navigate = useNavigate();
   const { score, correct, incorrect } = result;
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -12,6 +14,7 @@ const GameSummary = ({ questionArray, result }) => {
     };
     highScoreArray.push(highScoreData);
     localStorage.setItem("highScores", JSON.stringify(highScoreArray));
+    navigate("/highscores");
   };
 
   return (

@@ -56,3 +56,7 @@ body {
   background-color: #c99073;
   margin: auto 0;
 }
+
+.answer-hover-even-rotation:hover:nth-child(even){
+  transform: rotate(-3deg);
+}

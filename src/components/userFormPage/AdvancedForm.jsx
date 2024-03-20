@@ -11,6 +11,11 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
       [array[i], array[j]] = [array[j], array[i]];
     }
   }
+
+  const handleGoHome = () => {
+    navigate("/")
+  }
+
   const handleFormSubmit = (event) => {
     event.preventDefault();
     const questionLimit = event.target.questionLimit.value;
@@ -90,16 +95,16 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
                 id="grid-state"
                 name="category"
               >
-                <option>music</option>
-                <option>sport_and_leisure</option>
-                <option>film_and_tv</option>
-                <option>arts_and_literature</option>
-                <option>history</option>
-                <option>society_and_culture</option>
-                <option>science</option>
-                <option>geography</option>
-                <option>food_and_drink</option>
-                <option>general_knowledge</option>
+                <option>Music</option>
+                <option>Sport & Leisure</option>
+                <option>Film & TV</option>
+                <option>Arts & Literature</option>
+                <option>History</option>
+                <option>Society & Culture</option>
+                <option>Science</option>
+                <option>Geography</option>
+                <option>Food & Drink</option>
+                <option>General Knowledge</option>
               </select>
             </div>
           </div>
@@ -108,6 +113,13 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
             type="submit"
           >
             Submit
+          </button>
+          <button
+            className="mt-4 w-full bg-purple-900 hover:bg-purple-700 text-sm text-white py-2 px-4 rounded"
+            type="button"
+            onClick={handleGoHome}
+          >
+            Go home.
           </button>
         </div>
       </form>

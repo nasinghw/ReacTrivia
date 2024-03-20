@@ -20,6 +20,7 @@ function App() {
     correct: 0,
     incorrect: 0,
   })
+
   console.log(questionArray)
   return (
  <Router>
@@ -29,10 +30,10 @@ function App() {
       <Routes >
       <Route index element={<LandingPage  setResult ={setResult}/>} />
       <Route  path='questions-page' element={<QuestionsPage questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>} />
-      <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray}/>} />
+      <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray} />} />
       <Route  path='results-page' element={<ResultsPage questionArray={questionArray} result={result}/>} />
 
-      <Route path='high-scores-page' element={<HighScoresPage />} />
+      <Route path='highscores' element={<HighScoresPage />} />
 
     </Routes>
  </Router>
