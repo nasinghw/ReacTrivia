@@ -22,38 +22,32 @@ const QuestionContent = ({
   }
 
   const [questionCount, setQuestionCount] = useState(0);
-  const [selectedAnswer, setSelectedAnswer] = useState("");
+  const [selectedAnswerIndex, setSelectedAnswerIndex] = useState(null);
   const { question, choices, correctAnswer } = questionArray[questionCount];
   const { score, correct, incorrect } = result;
-  let btnStyle = false;
 
   const nextQuestion = () => {
+    const selectedChoice = choices[selectedAnswerIndex];
+    
     if (questionCount !== questionArray.length - 1) {
       setQuestionCount((current) => current + 1);
     } else {
       setQuestionCount(0);
       navigate("/results-page");
     }
-    setResult((current) =>
-      selectedAnswer
-        ? {
-            ...current,
-            score: current.score + 1,
-            correct: current.correct + 1,
-          }
-        : {
-            ...current,
-            incorrect: current.incorrect + 1,
-          }
-    );
-    console.log(result);
+    
+    setResult((current) => ({
+      ...current,
+      score: current.score + (selectedChoice === correctAnswer ? 1 : 0),
+      correct: current.correct + (selectedChoice === correctAnswer ? 1 : 0),
+      incorrect: current.incorrect + (selectedChoice !== correctAnswer ? 1 : 0),
+    }));
+
+    setSelectedAnswerIndex(null);
   };
 
-  const answerSelect = (answer) => {
-    btnStyle = true;
-    answer === correctAnswer
-      ? setSelectedAnswer(true)
-      : setSelectedAnswer(false);
+  const answerSelect = (index) => {
+    setSelectedAnswerIndex(index);
   };
 
   return (
@@ -63,11 +57,15 @@ const QuestionContent = ({
         {question}
       </h2>
       <ul className="flex gap-4 justify-center">
-        {choices.map((ele) => (
+        {choices.map((ele, index) => (
           <li
-            onClick={() => answerSelect(ele)}
+            onClick={() => answerSelect(index)}
             key={ele}
-            className="bg-yellow-200 font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3"
+            className={`${
+              selectedAnswerIndex === index
+                ? "bg-yellow-300 scale-110 rotate-3"
+                : "bg-yellow-200"
+            } font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3`}
           >
             {ele}
           </li>
