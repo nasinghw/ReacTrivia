@@ -49,7 +49,7 @@ const GameSummary = ({ questionArray, result }) => {
           type="text"
           name="userName"
           placeholder="Your Name Here"
-          className="py-2 px-4 border border-gray-300 rounded-l focus:outline-none focus:ring focus:border-blue-500"
+          className="py-2 px-4 border border-gray-300 rounded-l focus:outline-none focus:ring focus:border-blue-500 text-gray-800"
         ></input>
         <button
           className="bg-green-500 hover:bg-green-600 text-white py-2 px-4 rounded-r transition duration-300 ease-in-out"
