@@ -1,14 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { Link } from "react-router-dom";
 
 const GameSummary = ({ questionArray, result }) => {
-  const { score, correct, incorrect } = result
+  const { score, correct, incorrect } = result;
   const handleFormSubmit = (event) => {
     event.preventDefault();
-    const highScoreArray = JSON.parse(localStorage.getItem('highScores')) || [];
+    const highScoreArray = JSON.parse(localStorage.getItem("highScores")) || [];
     const highScoreData = {
       userName: event.target.userName.value,
-      userScore: score
+      userScore: score,
     };
     highScoreArray.push(highScoreData);
     localStorage.setItem("highScores", JSON.stringify(highScoreArray));
@@ -16,21 +16,28 @@ const GameSummary = ({ questionArray, result }) => {
 
   return (
     <div className="game-summary">
-      <h2>Game Summary</h2>
+      <h2 className="mt-10 text-xl text-zync-100">Game Summary</h2>
       <ul>
-        <li>Score: {score} out of {questionArray.length}</li>
-        <li>Correct Answers: {correct} out of {questionArray.length}</li>
-        <li>Incorrect Answers: {incorrect} out of {questionArray.length}</li>
+        <li>
+          Score: {score} out of {questionArray.length}
+        </li>
+        <li>
+          Correct Answers: {correct} out of {questionArray.length}
+        </li>
+        <li>
+          Incorrect Answers: {incorrect} out of {questionArray.length}
+        </li>
       </ul>
       <form onSubmit={handleFormSubmit}>
-        <input type="text" name ="userName" placeholder='Your Name Here'></input>
-        <button className="btn-primary" type="submit">Submit!</button>
+        <input type="text" name="userName" placeholder="Your Name Here"></input>
+        <button className="btn-primary" type="submit">
+          Submit!
+        </button>
       </form>
-      <Link to="/">
-        <button className="btn-primary" >Go home</button>
+      <Link to="/" >
+        <button className="btn-primary">Go home</button>
       </Link>
     </div>
-    
   );
 };
 
