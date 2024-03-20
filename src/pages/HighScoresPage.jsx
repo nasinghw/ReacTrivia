@@ -15,8 +15,7 @@ const HighScoresPage = () => {
   };
 
   const handleClearScores = () => {
-    // Implement logic to clear high scores (e.g., reset local storage)
-    // For demonstration purposes, let's assume you clear the high scores array:
+    
     localStorage.removeItem('highScores');
     // Reload the page or update state to reflect the change
     window.location.reload();
