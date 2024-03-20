@@ -19,7 +19,7 @@ const LandingPage = ({ setResult }) => {
           startWhenVisible
           strings={["<span class='welcome'> Welcome to</span>"]}
           typeSpeed={45}
-          startDelay={1000}
+          startDelay={300}
           cursorChar=""
         />
         <br />

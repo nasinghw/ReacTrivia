@@ -9,17 +9,17 @@ const Header = () => {
   return (
     <>
       <div
-        className="my-20 text-center text-7xl border-red"
+        className="text-center text-7xl "
         style={{ display: hideComponent ? "none" : "block" }}
       >
         <ReactTyped
-          strings={["<strong>&lt;ReacTrivia /&gt;"]}
+          startWhenVisible
+          strings={[
+            "<strong class='reactrivia'> <span class='more-less'> < </span> Reac<span class='more-less'>T</span>rivia <span class='more-less'>/&gt;</span>",
+          ]}
           typeSpeed={45}
-          backSpeed={45}
-          backDelay={10000}
+          startDelay={1000}
           cursorChar="_"
-          loop
-          loopCount={5}
         />
       </div>
     </>
