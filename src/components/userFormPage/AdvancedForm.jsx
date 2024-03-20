@@ -56,7 +56,7 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
         <div className="mb-4">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div>
-              <label className="block text-gray-700 text-sm font-bold mb-2 text-black-800">
+              <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                 Nº OF QUESTIONS
               </label>
               <input
