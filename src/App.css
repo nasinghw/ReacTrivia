@@ -23,6 +23,7 @@ body {
   text-align: center;
   background-color: #8e1255;
   border-radius: 10px;
+  padding-top: 3em;
 }
 .btn-container {
   /* border: solid 3px green; */
@@ -41,3 +42,17 @@ body {
   }
 }
 
+.border-red {
+  border: solid 1px red;
+}
+
+.heigh-100-cent {
+  height: 100vh;
+}
+
+.game-summary {
+  gap: 20px;
+  align-self: center;
+  background-color: #c99073;
+  margin: auto 0;
+}
