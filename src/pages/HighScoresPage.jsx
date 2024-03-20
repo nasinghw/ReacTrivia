@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import Header from '../template/Header';
 
 const HighScoresPage = () => {
   const navigate = useNavigate();
@@ -66,6 +67,7 @@ const HighScoresPage = () => {
           Clear Scores
         </button>
       </div>
+      
     </>
   );
 };

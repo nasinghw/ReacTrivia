@@ -18,7 +18,7 @@ SO THAT I can have fun & test my general knowledge
 
 ## Access
 
-To view this project, the deployed site can be found hosted on Netlify at: https://unrivaled-pika-65d12f.netlify.app/
+To view this project, the deployed site can be found hosted on Netlify at: https://reac-trivia.netlify.app/
 
 ## Installation & Setup
 
