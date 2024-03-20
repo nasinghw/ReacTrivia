@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Description from "../components/landingPage/Description";
 import { Link } from "react-router-dom";
+import { ReactTyped } from "react-typed";
 
 const LandingPage = ({ setResult }) => {
   const resetResults = () => {
@@ -12,7 +13,18 @@ const LandingPage = ({ setResult }) => {
   };
 
   return (
+
+     
     <div className="flex flex-col  justify-between items-center">
+    <div className="my-20 text-center text-6xl 	" >
+    <ReactTyped
+      startWhenVisible
+      strings={["Welcome to <strong>&lt;ReacTrivia /&gt;"]}
+      typeSpeed={45}
+      startDelay={1000}
+      cursorChar="_"
+     />
+     </div>
       <div>
         <Description />
       </div>
