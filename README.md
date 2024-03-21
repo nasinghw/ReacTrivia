@@ -11,14 +11,39 @@ AS A trivia enthusiast\
 I WANT to play quiz games\
 SO THAT I can have fun & test my general knowledge
 
-## Features
-
-1. **...:**
-   - ...
 
 ## Access
 
 To view this project, the deployed site can be found hosted on Netlify at: https://reac-trivia.netlify.app/
+
+## Features
+
+1. **Interactive Particle Background:**
+   - Floating particles interact with user's mouse movement/inputs.
+
+2. **Loading screen**
+   - Visual and dynamic loading screen to inform the user that the app is being loaded to prevent users from unnecessarily leaving the site.
+
+3. **Dynamic and fun Logo design:**
+   - Logo design that is dynamic and is typed onto page using Typed.js npm package. Adds an interesting element to the quiz game.
+
+4. **Vibrant and cohesive colour scheme:**
+   - a bright and contrasted colour theme, fitting the style of an entertainment/game app, enhances the users experience.
+
+5. **Customisable Quiz Form :**
+   - The user is prompted to select their preferred settings for the quiz allowing them to take control.
+
+6. **Animated button selection:**
+   - The quiz answer buttons animate on click allowing the user to know which answer is selected and creates a dynamic feel to the app.
+
+7. **Quiz summary/results display:**
+   - Simple and easy to follow results section allowing the user to know thier score, and how many answers were incorrect and correct.
+
+8. **Highscore page:**
+   - A page which saves and displays local Quiz game results allowing the end user to keep track of their progress and highscore.
+
+
+
 
 ## Installation & Setup
 
