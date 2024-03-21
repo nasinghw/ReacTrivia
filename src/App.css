@@ -23,7 +23,7 @@ body {
   text-align: center;
   background-color: #8e1255;
   border-radius: 10px;
-  padding-top: 3em;
+  padding-top: 6em;
 }
 
 
@@ -40,6 +40,11 @@ body {
 
 .heigh-100-cent {
   height: 100vh;
+}
+
+#q-content-container{
+  padding-top:6em;
+
 }
 
 .game-summary {
@@ -84,7 +89,7 @@ body {
   .reactrivia {
     color: #d47e53;
     text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
-    font-size: 0.8em;
+    font-size: 1em;
   }
 
   .more-less {
@@ -97,20 +102,20 @@ body {
 /* Medium devices (landscape phones, 768px and up) */
 @media (min-width: 579px) and (max-width: 767px) {
   #root {
-    max-width: 50vw;
+    max-width: 70vw;
     min-height: 90vh;
   }
 
   .welcome {
     color: #ffffff;
-    font-size: 2em;
+    font-size: 1em;
   }
 
   .reactrivia {
     width: 100%;
     color: #d47e53;
     text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
-    font-size: 4em;
+    font-size: 1.2em;
     padding: 0;
     margin-bottom: 0;
   }
