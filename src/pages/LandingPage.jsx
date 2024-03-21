@@ -24,7 +24,7 @@ const LandingPage = ({ setResult }) => {
       startWhenVisible
       strings={["Welcome to <strong>&lt;ReacTrivia /&gt;"]}
       typeSpeed={45}
-      startDelay={1000}
+      startDelay={900}
       cursorChar="_"
      />
      </div>

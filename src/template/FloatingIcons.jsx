@@ -3,6 +3,7 @@ import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadFull } from "tsparticles";
 import { loadSlim } from "@tsparticles/slim";
 import { useLocation } from 'react-router';
+import LoadingPage from '../pages/LoadingPage';
 
 
 // Credit for code below goes to the tsParticles npm package examples. See repo README for more info.
@@ -36,6 +37,7 @@ const FloatingIcons = () => {
 
 
  return (
+<>
     <Particles
         id="tsparticles"
         particlesLoaded={particlesLoaded}
@@ -112,6 +114,7 @@ const FloatingIcons = () => {
             detectRetina: true,
         }}
     />
+    </>
 );
 }
 

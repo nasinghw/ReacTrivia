@@ -1,8 +1,17 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
+import { useNavigate } from "react-router";
 
 const LoadingPage = () => {
-    
+   
+   
+    const navigate = useNavigate();
+   
+    const handleGoHome = () => {
+        navigate("/home")
+      }
+
+setTimeout(() =>{handleGoHome()}, 10000)
 
 
     return(
@@ -23,10 +32,10 @@ const LoadingPage = () => {
         <ReactTyped
           startWhenVisible
           strings={[ "Entering the world of... React Quizzes",  "Entering the world of... Knowledge","Entering the world of... ^1000 <strong>&lt;ReacTrivia /&gt;"]}
-          typeSpeed={40}
+          typeSpeed={30}
           smartBackspace
           backDelay={700}
-          backSpeed={30}
+          backSpeed={25}
           cursorChar="_"
           loop
           

@@ -25,7 +25,6 @@ function App() {
     incorrect: 0,
   })
 
-  
   console.log(questionArray)
   
   
