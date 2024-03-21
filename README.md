@@ -66,7 +66,7 @@ Follow these steps to install and use this application:
 6. **Run the application in development mode in your browser:**\
    ` npm run dev`
   
-   Follow the link that is highlighted: e.g" http://localhost:3000/
+   Follow the link that is highlighted: e.g" http://localhost:3000/"
 
 ## Technologies/Resources Used
 
