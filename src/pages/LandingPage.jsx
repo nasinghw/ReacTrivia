@@ -17,7 +17,7 @@ const LandingPage = ({ setResult }) => {
   
   return (
 
-    <div className="flex flex-col  justify-between items-center">
+    <div className="flex flex-col my-20 justify-between items-center">
       <div className=" 	">
         <ReactTyped
           startWhenVisible
@@ -27,7 +27,7 @@ const LandingPage = ({ setResult }) => {
           cursorChar=""
         />
         <br />
-        <ReactTyped
+        <ReactTyped className="text-4xl leading-relaxed"
           startWhenVisible
           strings={[
             "<strong class='reactrivia'> <span class='more-less'> < </span> Reac<span class='more-less'>T</span>rivia <span class='more-less'>/&gt;</span>",

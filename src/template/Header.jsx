@@ -11,10 +11,10 @@ const Header = () => {
     console.log(hideComponent)
     return(
     <>
-    <div className="" id="header"></div>
+    <div  id="header"></div>
         <div className="text-center" style={{ display: hideComponent || hideLoad ? 'none' : 'block' }}>
 
-        <ReactTyped
+        <ReactTyped className="text-3xl leading-relaxed"
           startWhenVisible
           strings={[
             "<strong class='reactrivia'> <span class='more-less'> < </span> Reac<span class='more-less'>T</span>rivia <span class='more-less'>/&gt;</span>",

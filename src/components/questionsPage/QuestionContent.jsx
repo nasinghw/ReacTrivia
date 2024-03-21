@@ -12,7 +12,7 @@ const QuestionContent = ({
   useEffect(() => {
     if (questionArray.length === 0) {
       setTimeout(() => {
-        navigate("/");
+        navigate("/home");
       }, 0);
     }
   }, [questionArray, navigate]);
