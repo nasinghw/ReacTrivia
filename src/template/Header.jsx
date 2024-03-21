@@ -12,7 +12,7 @@ const Header = () => {
     return(
     <>
     <div className="" id="header"></div>
-        <div className="my-20 text-center text-7xl" style={{ display: hideComponent || hideLoad ? 'none' : 'block' }}>
+        <div className="text-center" style={{ display: hideComponent || hideLoad ? 'none' : 'block' }}>
 
         <ReactTyped
           startWhenVisible
