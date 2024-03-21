@@ -4,7 +4,7 @@ const QuestionsPage = ({ questionArray, setQuestionArray, result, setResult}) =>
 
     return(
         <>
-            <QuestionContent questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>
+            <QuestionContent id="question-content" questionArray={questionArray} setQuestionArray={setQuestionArray} result={result} setResult ={setResult}/>
         </>
     );
 
