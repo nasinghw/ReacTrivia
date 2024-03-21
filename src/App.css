@@ -27,9 +27,7 @@ body {
 
 }
 
-.btn-container {
-  /* border: solid 3px green; */
-}
+
 /* btn */
 
 .btn-primary {
@@ -61,4 +59,9 @@ body {
 
 .answer-hover-even-rotation:hover:nth-child(even){
   transform: rotate(-3deg);
+}
+
+
+#spinner{
+  padding-top: 20vh;
 }

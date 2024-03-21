@@ -73,7 +73,7 @@ const QuestionContent = ({
       incorrect: 0,
     })
     setQuestionArray([])
-    navigate("/")
+    navigate("/home")
   }
 
   return (
