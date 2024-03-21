@@ -76,6 +76,7 @@ Follow these steps to install and use this application:
 - [React](https://react.dev/) - JavaScript library that's used for building reactive websites.
 - [node.js](https://nodejs.org/en) - JavaScript runtime environment.
 - [Vite](https://vitejs.dev/) - Vite is a local development server.
+- [Netlify](https://www.netlify.com/) - Used for deploying the single page application.
 
 **npm Packages:**
 
@@ -95,6 +96,15 @@ find packages at [npmjs.com](https://www.npmjs.com/)
 
 ## Initial Wireframe design
 ![Wireframe](./public/Wireframe.png)
+
+## Website Screenshots
+
+![Landing Page](./public/screenshot-LandingPage.png)
+![User Form](./public/screenshot-userform.png)
+![Questions Page](./public/screenshot-questions.png)
+![Results](./public/screenshot-results.png)
+
+
 
 ## Collaborators
 **Narinder Singh:**
