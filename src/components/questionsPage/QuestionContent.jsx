@@ -102,7 +102,7 @@ const QuestionContent = ({
       </ul>
       <button
         onClick={nextQuestion}
-        className="justify-centerbg-green-500 hover:bg-green-600 text-white py-2 px-8 rounded mt-5 mb-10 w-full md:w-auto"
+        className="justify-center bg-green-500 hover:bg-green-600 text-white py-2 px-8 rounded mt-5 mb-10 w-full md:w-auto"
       >
         {/*Clicking button next question to change questions forward */}
         {questionCount === questionArray.length - 1 ? "Finish" : "Next"}
