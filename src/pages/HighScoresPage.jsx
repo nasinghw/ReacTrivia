@@ -12,7 +12,7 @@ const HighScoresPage = () => {
   ];
 
   const handleGoHome = () => {
-    navigate("/");
+    navigate("/home");
   };
 
   const handleClearScores = () => {
