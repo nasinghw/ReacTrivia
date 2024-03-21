@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <>
       <div
-        className="text-center text-7xl "
+        className="text-center "
         style={{ display: hideComponent ? "none" : "block" }}
       >
         <ReactTyped

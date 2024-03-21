@@ -14,7 +14,7 @@ const LandingPage = ({ setResult }) => {
 
   return (
     <div className="flex flex-col  justify-between items-center">
-      <div className="text-center text-6xl 	">
+      <div className=" 	">
         <ReactTyped
           startWhenVisible
           strings={["<span class='welcome'> Welcome to</span>"]}
@@ -33,7 +33,7 @@ const LandingPage = ({ setResult }) => {
           cursorChar="_"
         />
       </div>
-      <div>
+      <div className="">
         <Description />
       </div>
 

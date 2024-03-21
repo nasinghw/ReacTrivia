@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from '../template/Header';
+import Header from "../template/Header";
 
 const HighScoresPage = () => {
   const navigate = useNavigate();
@@ -51,9 +51,9 @@ const HighScoresPage = () => {
           ))}
         </ul>
       </div>
-      <div>
+      <div className="flex flex-col gap-2 mt-20 sm:flex-row md:gap-2">
         <button
-          className="mt-4 w-full bg-amber-700 hover:bg-orange-400 text-sm text-white py-2 px-4 rounded"
+          className="mt-4 w-full sm:w-30 bg-amber-500 hover:bg-amber-400 text-sm text-white py-2 px-4 rounded"
           type="button"
           onClick={handleGoHome}
         >
@@ -67,7 +67,6 @@ const HighScoresPage = () => {
           Clear Scores
         </button>
       </div>
-      
     </>
   );
 };
