@@ -51,7 +51,7 @@ const HighScoresPage = () => {
           ))}
         </ul>
       </div>
-      <div className="flex flex-col gap-2 mt-20 sm:flex-row md:gap-2">
+      <div className="flex flex-col px-5 gap-2 mt-20 sm:flex-row md:gap-2">
         <button
           className="mt-4 w-full sm:w-30 bg-amber-500 hover:bg-amber-400 text-sm text-white py-2 px-4 rounded"
           type="button"
@@ -59,8 +59,9 @@ const HighScoresPage = () => {
         >
           Go home.
         </button>
+
         <button
-          className="mt-2 w-full bg-red-500 hover:bg-red-400 text-sm text-white py-2 px-4 rounded"
+          className="mt-4 w-full bg-red-500 hover:bg-red-400 text-sm text-white py-2 px-4 rounded"
           type="button"
           onClick={handleClearScores}
         >

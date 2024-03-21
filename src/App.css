@@ -73,6 +73,7 @@ body {
 /* Small devices (landscape phones, 576px and up) */
 @media (max-width: 578px) {
   #root {
+    min-width: 90vw;
     max-width: 90vw;
   }
 
