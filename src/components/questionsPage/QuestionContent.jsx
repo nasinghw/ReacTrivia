@@ -71,10 +71,10 @@ const QuestionContent = ({
       score: 0,
       correct: 0,
       incorrect: 0,
-    })
-    setQuestionArray([])
-    navigate("/")
-  }
+    });
+    setQuestionArray([]);
+    navigate("/");
+  };
 
   return (
     <>
@@ -95,7 +95,6 @@ const QuestionContent = ({
                 ? "bg-yellow-300 scale-110 rotate-3"
                 : "bg-yellow-200"
             } font-bold p-3 rounded mt-3 transition duration-500 ease-in-out text-purple-900 hover:cursor-pointer hover:bg-yellow-300 hover:scale-110 hover:rotate-3 w-full md:w-fit answer-hover-even-rotation`}
-
           >
             {ele}
           </li>
@@ -129,9 +128,24 @@ const QuestionContent = ({
         </button>
       </div>
       <div className="mt-5">
-      <button className="inline-flex items-center px-3 py-1 text-sm font-medium text-center text-white bg-amber-600 hover:bg-amber-500 rounded-lg focus:outline-none  dark:bg-orange-600 " onClick={handleQuitQuiz}>
-          Quit quiz.
-      </button>
+        <button
+          className="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-white bg-amber-600 hover:bg-amber-500 rounded focus:outline-none  dark:bg-orange-600 "
+          onClick={handleQuitQuiz}
+        >
+          QUIT QUIZ
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="w-6 h-6"
+          >
+            <path
+              fillRule="evenodd"
+              d="M7.5 3.75A1.5 1.5 0 0 0 6 5.25v13.5a1.5 1.5 0 0 0 1.5 1.5h6a1.5 1.5 0 0 0 1.5-1.5V15a.75.75 0 0 1 1.5 0v3.75a3 3 0 0 1-3 3h-6a3 3 0 0 1-3-3V5.25a3 3 0 0 1 3-3h6a3 3 0 0 1 3 3V9A.75.75 0 0 1 15 9V5.25a1.5 1.5 0 0 0-1.5-1.5h-6Zm10.72 4.72a.75.75 0 0 1 1.06 0l3 3a.75.75 0 0 1 0 1.06l-3 3a.75.75 0 1 1-1.06-1.06l1.72-1.72H9a.75.75 0 0 1 0-1.5h10.94l-1.72-1.72a.75.75 0 0 1 0-1.06Z"
+              clipRule="evenodd"
+            />
+          </svg>
+        </button>
       </div>
     </>
   );

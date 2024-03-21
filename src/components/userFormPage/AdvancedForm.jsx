@@ -116,11 +116,11 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
               Submit
             </button>
             <button
-              className="mt-4 w-full bg-yellow-500 hover:bg-amber-600 text-sm text-white py-2 px-4 rounded"
+              className="mt-4 w-full bg-yellow-500 hover:bg-amber-600 text-sm text-purple-950  py-2 px-4 rounded"
               type="button"
               onClick={handleGoHome}
             >
-              Go home.
+              Home
             </button>
           </div>
         </div>
