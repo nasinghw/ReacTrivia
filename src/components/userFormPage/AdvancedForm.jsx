@@ -13,8 +13,8 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
   }
 
   const handleGoHome = () => {
-    navigate("/")
-  }
+    navigate("/");
+  };
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
@@ -53,7 +53,7 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
 
   return (
     <div className="flex flex-col items-center h-full">
-      <h1 className="mt-10 text-xl text-zync-100">Configure your Game</h1>
+      <h1 className="mt-10 text-2xl text-zync-100">Configure your Game</h1>
       <form
         className="bg-white bg-opacity-50 shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-20 "
         onSubmit={handleFormSubmit}
@@ -108,19 +108,21 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
               </select>
             </div>
           </div>
-          <button
-            className="mt-4 w-full bg-purple-900 hover:bg-purple-700 text-sm text-white py-2 px-4 rounded"
-            type="submit"
-          >
-            Submit
-          </button>
-          <button
-            className="mt-4 w-full bg-amber-600 hover:bg-amber-500 text-sm text-white py-2 px-4 rounded"
-            type="button"
-            onClick={handleGoHome}
-          >
-            Go home.
-          </button>
+          <div className="flex flex-col gap-2 justify-center md:flex-row sm:gap-4 md:gap-4">
+            <button
+              className="mt-4 w-full bg-green-700 hover:bg-green-800 text-sm text-white py-2 px-4 rounded"
+              type="submit"
+            >
+              Submit
+            </button>
+            <button
+              className="mt-4 w-full bg-yellow-500 hover:bg-amber-600 text-sm text-white py-2 px-4 rounded"
+              type="button"
+              onClick={handleGoHome}
+            >
+              Go home.
+            </button>
+          </div>
         </div>
       </form>
     </div>
