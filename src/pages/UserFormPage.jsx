@@ -1,11 +1,11 @@
 import AdvancedForm from "../components/userFormPage/AdvancedForm";
 
 
-const UserFormPage = ({ questionArray, setQuestionArray }) =>{
+const UserFormPage = ({ setQuestionArray }) =>{
 
     return(
         <>
-            <AdvancedForm questionArray={questionArray} setQuestionArray={setQuestionArray}/>
+            <AdvancedForm setQuestionArray={setQuestionArray}/>
         </>
     );
 
