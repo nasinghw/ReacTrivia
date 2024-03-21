@@ -24,7 +24,6 @@ body {
   background-color: #8e1255;
   border-radius: 10px;
   padding-top: 3em;
-
 }
 
 
@@ -33,13 +32,6 @@ body {
 .btn-primary {
   background-color: var(--primary-color);
   color: var(--btn-color);
-}
-
-/* Small devices (landscape phones, 576px and up) */
-@media (max-width: 576px) {
-  #root {
-    max-width: 90%;
-  }
 }
 
 .border-red {
@@ -57,11 +49,108 @@ body {
   margin: auto 0;
 }
 
-.answer-hover-even-rotation:hover:nth-child(even){
+.answer-hover-even-rotation:hover:nth-child(even) {
   transform: rotate(-3deg);
 }
 
 
+.welcome {
+  color: #ffffff;
+}
+
+.reactrivia {
+  color: rgb(255, 255, 5);
+  text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+}
+
+.more-less {
+  color: rgb(19, 140, 3);
+  font-weight: bold;
+  text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 578px) {
+  #root {
+    min-width: 90vw;
+    max-width: 90vw;
+  }
+
+  .welcome {
+    color: #ffffff;
+    font-size: 1.5em;
+  }
+
+  .reactrivia {
+    color: rgb(255, 255, 5);
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+    font-size: 2.2em;
+  }
+
+  .more-less {
+    color: rgb(19, 140, 3);
+    font-weight: bold;
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+  }
+}
+
+/* Medium devices (landscape phones, 768px and up) */
+@media (min-width: 579px) and (max-width: 767px) {
+  #root {
+    max-width: 50vw;
+    min-height: 90vh;
+  }
+
+  .welcome {
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+  .reactrivia {
+    width: 100%;
+    color: rgb(255, 255, 5);
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+    font-size: 1.8em;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .more-less {
+    color: rgb(19, 140, 3);
+    font-weight: bold;
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+  }
+}
+
+/* Above Medium (landscape phones, 769px and up) */
+@media (min-width: 768px) {
+  #root {
+    max-width: 70vw;
+    min-height: 80vh;
+  }
+
+  .welcome {
+    color: #ffffff;
+    font-size: 2em;
+  }
+
+  .reactrivia {
+    width: 100%;
+    color: rgb(255, 255, 5);
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+    font-size: 3.8em;
+    padding: 0;
+    margin-bottom: 0;
+  }
+
+  .more-less {
+    color: rgb(19, 140, 3);
+    font-weight: bold;
+    text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
+  }
+}
+
 #spinner{
   padding-top: 20vh;
 }
+
