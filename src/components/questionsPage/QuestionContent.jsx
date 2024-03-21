@@ -71,10 +71,12 @@ const QuestionContent = ({
       score: 0,
       correct: 0,
       incorrect: 0,
-    });
-    setQuestionArray([]);
-    navigate("/");
-  };
+
+    })
+    setQuestionArray([])
+    navigate("/home")
+  }
+
 
   return (
     <>

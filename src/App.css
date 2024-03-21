@@ -26,9 +26,7 @@ body {
   padding-top: 3em;
 }
 
-.btn-container {
-  /* border: solid 3px green; */
-}
+
 /* btn */
 
 .btn-primary {
@@ -54,6 +52,7 @@ body {
 .answer-hover-even-rotation:hover:nth-child(even) {
   transform: rotate(-3deg);
 }
+
 
 .welcome {
   color: #ffffff;
@@ -150,3 +149,8 @@ body {
     text-shadow: 6px 3px 7px rgba(0, 0, 0, 0.63);
   }
 }
+
+#spinner{
+  padding-top: 20vh;
+}
+

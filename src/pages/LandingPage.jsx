@@ -3,6 +3,7 @@ import Description from "../components/landingPage/Description";
 import { Link } from "react-router-dom";
 import { ReactTyped } from "react-typed";
 
+
 const LandingPage = ({ setResult }) => {
   const resetResults = () => {
     setResult({
@@ -11,8 +12,11 @@ const LandingPage = ({ setResult }) => {
       incorrect: 0,
     });
   };
-
+  
+  
+  
   return (
+
     <div className="flex flex-col  justify-between items-center">
       <div className=" 	">
         <ReactTyped
@@ -34,6 +38,7 @@ const LandingPage = ({ setResult }) => {
         />
       </div>
       <div className="">
+
         <Description />
       </div>
 

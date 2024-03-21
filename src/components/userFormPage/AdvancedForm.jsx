@@ -13,8 +13,10 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
   }
 
   const handleGoHome = () => {
-    navigate("/");
-  };
+
+    navigate("/home")
+  }
+
 
   const handleFormSubmit = (event) => {
     event.preventDefault();
