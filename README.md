@@ -53,16 +53,17 @@ Follow these steps to install and use this application:
    To use and run this application, ensure that Node.js and npm (as well as Git) are installed locally.
    
 3. **Fork & clone this repository:**\
-   $ git clone https://github.com/nasinghw/group1p2.git
+   ` git clone https://github.com/nasinghw/ReacTrivia.git`
    
 4. **Navigate to the project directory in your terminal:**\
-   $ cd group1p2
+   ` cd ReacTrivia`
 
 5. **Install the necessary dependencies:**\
-   $ npm install
+   ` npm install`
    
 6. **Run the application in development mode in your browser:**\
-   $ npm run dev\
+   ` npm run dev`
+  
    Follow the link: http://localhost:3000/
 
 ## Initial Wireframe design
