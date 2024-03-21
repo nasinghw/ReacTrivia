@@ -45,7 +45,8 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
           newQuestionArray.push(questionInfo);
         }
         setQuestionArray(newQuestionArray);
-        // console.log(questionArray)
+        console.log(apiUrl)
+        console.log(questionArray)
         navigate("/questions-page");
       })
       .catch((error) => {
@@ -83,9 +84,9 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
                 id="grid-state"
                 name="difficulty"
               >
-                <option>easy</option>
-                <option>medium</option>
-                <option>hard</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
               </select>
             </div>
             <div>
@@ -97,16 +98,16 @@ const AdvancedForm = ({ questionArray, setQuestionArray }) => {
                 id="grid-state"
                 name="category"
               >
-                <option>Music</option>
-                <option>Sport & Leisure</option>
-                <option>Film & TV</option>
-                <option>Arts & Literature</option>
-                <option>History</option>
-                <option>Society & Culture</option>
-                <option>Science</option>
-                <option>Geography</option>
-                <option>Food & Drink</option>
-                <option>General Knowledge</option>
+                <option value="music">Music</option>
+                <option value="sport_and_leisure">Sport & Leisure</option>
+                <option value="film_and_tv">Film & TV</option>
+                <option value="arts_and_literature">Arts & Literature</option>
+                <option value="history">History</option>
+                <option value="society_and_culture">Society & Culture</option>
+                <option value="science">Science</option>
+                <option value="geography">Geography</option>
+                <option value="food_and_drink">Food & Drink</option>
+                <option value="general_knowledge">General Knowledge</option>
               </select>
             </div>
           </div>
