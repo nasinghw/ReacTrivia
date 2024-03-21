@@ -42,7 +42,6 @@ function App() {
       <Route  path='user-form' element={<UserFormPage questionArray={questionArray} setQuestionArray={setQuestionArray} />} />
       <Route  path='results-page' element={<ResultsPage questionArray={questionArray} result={result}/>} />
       <Route path='highscores' element={<HighScoresPage />} />
-      <Route render={() => <Redirect to="/" />} />
 
     </Routes>
  </Router>
