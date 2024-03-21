@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../template/Header";
 
 const HighScoresPage = () => {
+
   const navigate = useNavigate();
   // Fetch high scores from your database or use dummy data
+
   const highScores = [
     { username: "Player1", score: 20 },
     { username: "Player2", score: 17 },
-    // Add more high scores here
   ];
 
   const handleGoHome = () => {
@@ -31,7 +31,9 @@ const HighScoresPage = () => {
   return (
     <>
       <div>
+
         <h2 className="mt-10 text-2xl text-zync-100 mb-5">High Scores</h2>
+
         <ul>
           {highScores.map((score, index) => (
             <li key={index}>
@@ -39,10 +41,7 @@ const HighScoresPage = () => {
             </li>
           ))}
         </ul>
-        {/* <p>Your High Score: {userHighScore}</p> */}
 
-        {/* Display high scores from local storage */}
-        {/* <h3>High Scores from Local Storage:</h3> */}
         <ul>
           {highScoresFromLocalStorage.map((score, index) => (
             <li key={index}>
@@ -50,8 +49,11 @@ const HighScoresPage = () => {
             </li>
           ))}
         </ul>
+
       </div>
+
       <div className="flex flex-col px-5 gap-2 mt-20 sm:flex-row md:gap-2">
+
         <button
           className="mt-4 w-full sm:w-30 bg-amber-500 hover:bg-amber-400 text-sm text-green-950 font-bold py-2 px-4 rounded"
           type="button"
@@ -67,6 +69,7 @@ const HighScoresPage = () => {
         >
           Clear Scores
         </button>
+        
       </div>
     </>
   );

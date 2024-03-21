@@ -5,6 +5,7 @@ import { ReactTyped } from "react-typed";
 
 
 const LandingPage = ({ setResult }) => {
+
   const resetResults = () => {
     setResult({
       score: 0,
@@ -13,12 +14,12 @@ const LandingPage = ({ setResult }) => {
     });
   };
   
-  
-  
   return (
 
     <div className="flex flex-col my-20 justify-between items-center">
+
       <div className=" 	">
+
         <ReactTyped
           startWhenVisible
           strings={["<span class='welcome'> Welcome to</span>"]}
@@ -27,6 +28,7 @@ const LandingPage = ({ setResult }) => {
           cursorChar=""
         />
         <br />
+
         <ReactTyped className="text-4xl leading-relaxed"
           startWhenVisible
           strings={[
@@ -36,13 +38,15 @@ const LandingPage = ({ setResult }) => {
           startDelay={2000}
           cursorChar="_"
         />
-      </div>
-      <div className="">
 
+      </div>
+
+      <div className="">
         <Description />
       </div>
 
       <div className="btn-container flex flex-col gap-2 mt-20 sm:flex-row md:gap-0">
+
         <Link
           className="btn-primary btn-primary flex items-center justify-center rounded-full py-2 px-4 mx-2 hover:bg-yellow-300 w-40 shadow-sm hover:shadow-md transition duration-300 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transform hover:scale-105 active:scale-95 "
           to="/user-form"
@@ -58,13 +62,17 @@ const LandingPage = ({ setResult }) => {
               fill="currentColor"
               className="w-6 h-6 "
             >
+
               <path
                 fillRule="evenodd"
                 d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
                 clipRule="evenodd"
               />
+
             </svg>
+
           </button>
+
         </Link>
 
         <Link
@@ -72,7 +80,9 @@ const LandingPage = ({ setResult }) => {
           to="/highscores"
         >
           <button className="flex items-center justify-center">
+
             <span className="mr-2 flex">Highscores</span>
+
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -85,10 +95,15 @@ const LandingPage = ({ setResult }) => {
                 clipRule="evenodd"
               />
             </svg>
+
           </button>
+
         </Link>
+
       </div>
+
     </div>
+    
   );
 };
 
